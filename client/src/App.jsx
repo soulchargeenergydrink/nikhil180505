@@ -1,10 +1,9 @@
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/AppRoutes";
+
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <h1 className="text-6xl font-bold text-center pt-20">
-        SOULCHARGE
-      </h1>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
