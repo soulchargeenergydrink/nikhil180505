@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import athleteImg from '../assets/images/lifestyle/athlete.png';
@@ -64,6 +65,14 @@ export default function About() {
         </motion.div>
 
       </div>
+=======
+export default function About() {
+  return (
+    <div className="min-h-screen pt-40">
+      <h1 className="text-7xl text-center">
+        ABOUT
+      </h1>
+>>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
     </div>
   );
 }

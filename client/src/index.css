@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700;900&display=swap');
 @import "tailwindcss";
 
@@ -22,4 +23,41 @@ body {
 /* Custom glow utility for that premium look */
 .text-glow-purple {
   text-shadow: 0 0 20px rgba(139, 38, 239, 0.6), 0 0 40px rgba(217, 18, 182, 0.4);
+=======
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --primary: #1D2EA6;
+  --secondary: #5243D9;
+  --accent: #7B5CFF;
+
+  --bg: #050505;
+  --card: #0F0F0F;
+
+  --text: #FFFFFF;
+  --muted: #B0B0B0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Bebas Neue", sans-serif;
+>>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
 }

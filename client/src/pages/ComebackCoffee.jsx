@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import coffeeEnergy from '../assets/images/ingredients/coffee-energy.png';
@@ -74,6 +75,14 @@ export default function ComebackCoffee() {
         </div>
 
       </div>
+=======
+export default function ComebackCoffee() {
+  return (
+    <div className="min-h-screen pt-40">
+      <h1 className="text-7xl text-center">
+        COMEBACK COFFEE
+      </h1>
+>>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
     </div>
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -30,3 +31,19 @@ dist-ssr/
 .env.development.local
 .env.test.local
 .env.production.local
+=======
+node_modules/
+dist/
+build/
+
+.env
+.env.local
+
+.vscode/
+
+.DS_Store
+Thumbs.db
+
+logs
+*.log
+>>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd

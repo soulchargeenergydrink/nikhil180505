@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -97,6 +98,14 @@ export default function Contact() {
         </form>
 
       </div>
+=======
+export default function Contact() {
+  return (
+    <div className="min-h-screen pt-40">
+      <h1 className="text-7xl text-center">
+        CONTACT
+      </h1>
+>>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
     </div>
   );
 }
