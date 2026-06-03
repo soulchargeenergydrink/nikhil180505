@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brandBlack: #05050A; /* Deeper midnight black with blue undertone */
+  --color-brandDarkGray: #0E0D1A; /* Ultra-dark purple matrix shadow */
+  --color-brandBlue: #1A36F2; /* Electric blue aura from your can lighting */
+  --color-brandPurple: #8B26EF; /* High-intensity purple striping */
+  --color-brandMagenta: #D912B6; /* Magenta splash highlighting */
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Oswald', 'Impact', sans-serif;
+}
+
+body {
+  background-color: #05050A;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom glow utility for that premium look */
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(139, 38, 239, 0.6), 0 0 40px rgba(217, 18, 182, 0.4);
+}
