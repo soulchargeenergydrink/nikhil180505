@@ -1,33 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Space+Grotesk:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-brandBlack: #0B0B0C;
-  --color-brandDarkGray: #121214;
-  --color-brandPurple: #8B26EF;
-  --color-brandMagenta: #E6007E;
-  --color-brandBlue: #00D2FF;
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  
+  --color-brandBlack: #F9FAFB;       
+  --color-brandDarkGray: #FFFFFF;   
+  --color-brandPurple: #6D28D9;     
+  --color-brandMagenta: #DB2777;    
 }
 
 @layer base {
-  html {
+  html, body {
     scroll-behavior: smooth;
-    background-color: #0B0B0C;
-  }
-  
-  body {
+    background-color: #F9FAFB;
+    color: #111827;                 
     margin: 0;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: #0B0B0C;
+    font-family: var(--font-body);
     overflow-x: hidden;
-    color: #ffffff;
   }
 }
 
-/* Luxury Glowing Accent Utilities */
-.text-glow-purple {
-  text-shadow: 0 0 25px rgba(139, 38, 239, 0.45);
+/* Watermark Text Styles for Light Mode */
+.watermark-text {
+  color: rgba(17, 24, 39, 0.05) !important;
+  -webkit-text-stroke: 1px rgba(17, 24, 39, 0.08);
 }
 
-.text-glow-magenta {
-  text-shadow: 0 0 25px rgba(230, 0, 126, 0.45);
+.light-card-shadow {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.product-can-glow {
+  filter: drop-shadow(0 25px 35px rgba(109, 40, 217, 0.12));
 }
