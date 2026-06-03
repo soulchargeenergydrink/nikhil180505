@@ -1,58 +1,44 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Comeback Coffee', path: '/comeback-coffee' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Home', hash: '#home' },
+    { name: 'Comeback Coffee', hash: '#comeback-coffee' },
+    { name: 'About', hash: '#about' },
+    { name: 'Contact', hash: '#contact' }
   ];
-
-  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-brandBlack/85 backdrop-blur-md border-b border-white/5 px-8 md:px-14 py-5 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         
-        {/* Medium-Upscaled Logo */}
-        <Link 
-          to="/" 
+        {/* Branding Title Link */}
+        <a 
+          href="#home" 
           onClick={() => setIsOpen(false)}
           className="text-2xl sm:text-3xl font-display font-black uppercase tracking-[0.22em] text-white hover:text-brandPurple transition-colors duration-200"
         >
           soulcharge
-        </Link>
+        </a>
 
-        {/* Medium-Upscaled Desktop Links */}
+        {/* Desktop Anchor Navigation */}
         <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
-              to={link.path}
-              className={`text-sm sm:text-base font-bold uppercase tracking-[0.18em] transition-colors duration-300 relative py-1 ${
-                isActive(link.path) ? 'text-brandPurple' : 'text-gray-400 hover:text-white'
-              }`}
+              href={link.hash}
+              className="text-sm sm:text-base font-bold uppercase tracking-[0.18em] text-gray-400 hover:text-white transition-colors duration-300 py-1"
             >
               {link.name}
-              {isActive(link.path) && (
-                <motion.div 
-                  layoutId="activeUnderline"
-                  className="absolute bottom-0 left-0 w-full h-[2.5px] bg-brandPurple"
-                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                />
-              )}
-            </Link>
+            </a>
           ))}
         </div>
 
-        {/* Mobile menu trigger */}
+        {/* Mobile Toggle Trigger */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-white hover:text-brandPurple transition-colors focus:outline-none"
@@ -61,7 +47,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu Slide-Down Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -71,55 +57,18 @@ export default function Navbar() {
             className="absolute top-full left-0 w-full bg-brandBlack/95 border-b border-white/10 flex flex-col p-8 space-y-5 md:hidden shadow-2xl"
           >
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.path}
+                href={link.hash}
                 onClick={() => setIsOpen(false)}
-                className={`text-xl font-display font-bold uppercase tracking-widest ${
-                  isActive(link.path) ? 'text-brandPurple' : 'text-gray-300'
-                }`}
+                className="text-xl font-display font-bold uppercase tracking-widest text-gray-300 hover:text-brandPurple transition-colors"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </motion.div>
         )}
       </AnimatePresence>
-=======
-import { Link } from "react-router-dom";
-
-export default function Navbar() {
-  return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
-
-      <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-
-        <Link
-          to="/"
-          className="text-4xl tracking-widest"
-        >
-          SOULCHARGE
-        </Link>
-
-        <div className="flex gap-8 text-sm uppercase tracking-wider">
-
-          <Link to="/">Home</Link>
-
-          <Link to="/about">About</Link>
-
-          <Link to="/coffee">
-            Coffee
-          </Link>
-
-          <Link to="/contact">
-            Contact
-          </Link>
-
-        </div>
-
-      </div>
-
->>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
     </nav>
   );
 }

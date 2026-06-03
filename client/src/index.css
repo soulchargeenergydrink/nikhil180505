@@ -1,63 +1,33 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700;900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-brandBlack: #05050A; /* Deeper midnight black with blue undertone */
-  --color-brandDarkGray: #0E0D1A; /* Ultra-dark purple matrix shadow */
-  --color-brandBlue: #1A36F2; /* Electric blue aura from your can lighting */
-  --color-brandPurple: #8B26EF; /* High-intensity purple striping */
-  --color-brandMagenta: #D912B6; /* Magenta splash highlighting */
+  --color-brandBlack: #0B0B0C;
+  --color-brandDarkGray: #121214;
+  --color-brandPurple: #8B26EF;
+  --color-brandMagenta: #E6007E;
+  --color-brandBlue: #00D2FF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0B0B0C;
+  }
   
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Oswald', 'Impact', sans-serif;
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0B0B0C;
+    overflow-x: hidden;
+    color: #ffffff;
+  }
 }
 
-body {
-  background-color: #05050A;
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-}
-
-/* Custom glow utility for that premium look */
+/* Luxury Glowing Accent Utilities */
 .text-glow-purple {
-  text-shadow: 0 0 20px rgba(139, 38, 239, 0.6), 0 0 40px rgba(217, 18, 182, 0.4);
-=======
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap');
-
-@import "tailwindcss";
-
-:root {
-  --primary: #1D2EA6;
-  --secondary: #5243D9;
-  --accent: #7B5CFF;
-
-  --bg: #050505;
-  --card: #0F0F0F;
-
-  --text: #FFFFFF;
-  --muted: #B0B0B0;
+  text-shadow: 0 0 25px rgba(139, 38, 239, 0.45);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  overflow-x: hidden;
-  font-family: "Inter", sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6{
-  font-family: "Bebas Neue", sans-serif;
->>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
+.text-glow-magenta {
+  text-shadow: 0 0 25px rgba(230, 0, 126, 0.45);
 }

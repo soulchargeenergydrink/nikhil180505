@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -19,7 +18,7 @@ export default function Contact() {
     <div className="min-h-screen bg-brandBlack pt-36 pb-24 px-8 md:px-16 flex items-center">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-start w-full">
         
-        {/* Left Side Content - Medium Upscaled */}
+        {/* Informational Text Column */}
         <div className="space-y-8 lg:sticky lg:top-36">
           <div className="space-y-3">
             <h1 className="text-4xl sm:text-6xl font-display font-black uppercase text-white tracking-tight leading-none">
@@ -50,7 +49,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Side Input Form - Medium Upscaled */}
+        {/* Input Interface Form Block */}
         <form onSubmit={handleSubmit} className="bg-brandDarkGray border border-white/5 rounded-xl p-8 sm:p-10 space-y-6 w-full shadow-xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <input 
@@ -98,14 +97,6 @@ export default function Contact() {
         </form>
 
       </div>
-=======
-export default function Contact() {
-  return (
-    <div className="min-h-screen pt-40">
-      <h1 className="text-7xl text-center">
-        CONTACT
-      </h1>
->>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
     </div>
   );
 }

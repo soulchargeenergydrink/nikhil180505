@@ -1,18 +1,14 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite'; // <--- Add this compiler bridge!
 
-// https://vite.dev/config/
-=======
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
-
->>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
+    tailwindcss() // <--- Inject the style processing engine!
   ],
+  server: {
+    port: 5173,
+    host: true
+  }
 });

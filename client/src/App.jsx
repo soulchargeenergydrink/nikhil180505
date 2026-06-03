@@ -1,27 +1,36 @@
-<<<<<<< HEAD
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout';
-import AppRoutes from './routes/AppRoutes';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import ComebackCoffee from './pages/ComebackCoffee';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <Router>
-      <MainLayout>
-        <AppRoutes />
-      </MainLayout>
-    </Router>
+    <div className="min-h-screen bg-brandBlack text-white flex flex-col selection:bg-brandPurple selection:text-white scroll-smooth">
+      {/* Global Navbar Header */}
+      <Navbar />
+      
+      {/* Scroll Sections */}
+      <div id="home">
+        <Hero />
+      </div>
+      
+      <div id="comeback-coffee">
+        <ComebackCoffee />
+      </div>
+      
+      <div id="about">
+        <About />
+      </div>
+      
+      <div id="contact">
+        <Contact />
+      </div>
+      
+      {/* Global Footer */}
+      <Footer />
+    </div>
   );
 }
-=======
-import { RouterProvider } from "react-router-dom";
-import router from "./routes/AppRoutes";
-
-function App() {
-  return (
-    <RouterProvider router={router} />
-  );
-}
-
-export default App;
->>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
