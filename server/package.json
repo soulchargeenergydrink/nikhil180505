@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+<<<<<<< HEAD
+  "main": "index.js",
+  "scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+},
+=======
+  "main": "server.js",
+  "scripts": {
+     "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+>>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+<<<<<<< HEAD
+    "mongoose": "^9.6.3"
+=======
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "mongoose": "^9.6.3",
+    "morgan": "^1.10.1"
+>>>>>>> 6b82e306feba589c6fbf283b723295def5b493dd
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
