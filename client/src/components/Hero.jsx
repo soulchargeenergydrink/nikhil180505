@@ -6,17 +6,17 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-brandBlack flex flex-col justify-center items-center overflow-hidden px-8 pt-28 pb-16">
       
-      {/* Background Blur Lights */}
+      {/* Background Blur Ambient Lights */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brandPurple/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brandMagenta/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto text-center z-10 flex flex-col items-center max-w-6xl relative">
         
-        {/* Top Header Text */}
+        {/* Top Header Text with Slide Down Reveal */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-3 z-20 relative"
         >
           <span className="text-sm sm:text-base md:text-xl tracking-[0.45em] text-brandPurple font-bold uppercase block font-display">
@@ -24,19 +24,38 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Massive Background Watermark */}
-        <div className="absolute inset-0 flex items-center justify-center z-0 select-none pointer-events-none">
-          <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[13rem] font-display font-black uppercase tracking-tight watermark-text leading-none lines-around">
-            SOULCHARGE
-          </h1>
-        </div>
-
-        {/* Central Product Showcase Can Graphic */}
+        {/* Giant Background Watermark with Fade In Scaling */}
         <motion.div 
-          className="my-6 w-full max-w-[320px] sm:max-w-[550px] md:max-w-[680px] product-can-glow z-10 relative"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.15, duration: 1.1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="absolute inset-0 flex items-center justify-center z-0 select-none pointer-events-none"
+        >
+          <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[13rem] font-display font-black uppercase tracking-tight watermark-text leading-none">
+            SOULCHARGE
+          </h1>
+        </motion.div>
+
+        {/* Central Product Showcase with Combined Entry and Infinite Hover Float */}
+        <motion.div 
+          className="my-6 w-full max-w-[320px] sm:max-w-[550px] md:max-w-[680px] product-can-glow z-10 relative cursor-grab active:cursor-grabbing"
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          animate={{ 
+            opacity: 1, 
+            scale: 1,
+            y: [0, -12, 0]
+          }}
+          transition={{
+            opacity: { delay: 0.2, duration: 1, ease: "easeOut" },
+            scale: { delay: 0.2, duration: 1, ease: "easeOut" },
+            y: {
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
+          whileHover={{ scale: 1.03, rotate: 1 }}
+          whileTap={{ scale: 0.98 }}
         >
           <img 
             src={tripleCan} 
@@ -45,23 +64,29 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Lower Call-To-Action Content Block */}
+        {/* Lower Content Block with Spring Snapping CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+          transition={{ delay: 0.4, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center space-y-8 z-20 relative"
         >
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold uppercase tracking-wider text-gray-900 max-w-4xl px-4 leading-normal">
             World’s First <span className="text-brandMagenta">Comeback</span> Energy Drink
           </p>
           
-          <a 
-            href="#contact"
-            className="px-10 py-4 bg-gradient-to-r from-brandPurple to-brandMagenta text-white font-display font-bold uppercase tracking-[0.2em] text-sm sm:text-base hover:brightness-110 transition-all shadow-lg block rounded"
+          <motion.div
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 15 }}
           >
-            Get In Touch
-          </a>
+            <a 
+              href="#contact"
+              className="px-10 py-4 bg-gradient-to-r from-brandPurple to-brandMagenta text-white font-display font-bold uppercase tracking-[0.2em] text-sm sm:text-base shadow-lg block rounded hover:shadow-brandPurple/20"
+            >
+              Get In Touch
+            </a>
+          </motion.div>
         </motion.div>
 
       </div>
