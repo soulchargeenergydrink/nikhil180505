@@ -72,7 +72,7 @@ export default function Contact() {
             </p>
             <p className="flex flex-col sm:flex-row sm:space-x-3">
               <span className="text-brandPurple font-display uppercase tracking-wider font-bold min-w-[100px]">Phone:</span> 
-              <span className="text-gray-700">+91 9770323855</span>
+              <span className="text-gray-700">+91 91791 64483 </span>
             </p>
             <p className="flex flex-col sm:flex-row sm:space-x-3">
               <span className="text-brandPurple font-display uppercase tracking-wider font-bold min-w-[100px]">Instagram:</span> 
